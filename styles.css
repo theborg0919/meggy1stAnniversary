@@ -1,0 +1,136 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    text-align: center;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #ffcccb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    color: #ff69b4;
+}
+
+.box-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.game-box {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #333;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.game-box.flipped#box1 {
+    background-image: url('image1.jpg');
+    background-size: cover;
+    color: transparent;
+}
+
+.game-box.flipped#box2 {
+    background-image: url('image2.jpg');
+    background-size: cover;
+    color: transparent;
+}
+
+.game-box.flipped#box3 {
+    background-image: url('image3.jpg');
+    background-size: cover;
+    color: transparent;
+}
+
+.game-box.flipped#box4 {
+    background-image: url('image4.jpg');
+    background-size: cover;
+    color: transparent;
+}
+
+.game-box.flipped#box5 {
+    background-image: url('image5.jpg');
+    background-size: cover;
+    color: transparent;
+}
+
+.game-box.flipped#box6 {
+    background-image: url('image6.jpg');
+    background-size: cover;
+    color: transparent;
+}
+
+#quizOptions button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ffcccb;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#quizOptions button:hover {
+    background-color: #ffa07a;
+}
+
+#quizFeedback {
+    margin-top: 15px;
+    color: red;
+}
+
+#asciiArt {
+    font-family: monospace;
+    white-space: pre; 
+    color: #333;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+#cursor {
+    font-family: monospace;
+    font-size: 18px;
+    color: #333;
+    display: inline-block;
+    animation: blink 1s step-start infinite;
+}
+
+#finalSurprise {
+    text-align: center; 
+    margin-top: 20px;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

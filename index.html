@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anniversary Surprise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>HAPPY ANNIVERSARY MY MEGGY</h1>
+        <div id="box" class="box" onclick="unbox()">
+            <p>Click to Unbox 🎁</p>
+        </div>
+        <div id="message" class="hidden">
+            <p>my name is hyunny and i will be your assistant today</p>
+            <p>here's your warmup:</p>
+            <p>guess a number between 1 and 10!</p>
+            <input type="number" id="guess" min="1" max="10">
+            <button onclick="checkGuess()">Submit</button>
+            <p id="feedback"></p>
+        </div>
+
+        <!-- New Minigame (6 Boxes) -->
+        <div id="boxGame" class="hidden">
+            <p>my favorite pics</p>
+            <div class="box-grid">
+                <div class="game-box" id="box1" onclick="flipBox(1)">1</div>
+                <div class="game-box" id="box2" onclick="flipBox(2)">2</div>
+                <div class="game-box" id="box3" onclick="flipBox(3)">3</div>
+                <div class="game-box" id="box4" onclick="flipBox(4)">4</div>
+                <div class="game-box" id="box5" onclick="flipBox(5)">5</div>
+                <div class="game-box" id="box6" onclick="flipBox(6)">6</div>
+            </div>
+            <p id="boxFeedback"></p>
+        </div>
+
+        <!-- Placeholder for the next step -->
+        <div id="quizGame" class="hidden">
+            <p>how much do you know about us mwahahahaha</p>
+            <p id="quizQuestion"></p>
+            <div id="quizOptions">
+                <button onclick="checkAnswer(0)" id="option1"></button>
+                <button onclick="checkAnswer(1)" id="option2"></button>
+                <button onclick="checkAnswer(2)" id="option3"></button>
+                <button onclick="checkAnswer(3)" id="option4"></button>
+            </div>
+            <p id="quizFeedback"></p>
+        </div>
+        
+        <!-- Placeholder for the next section after the quiz -->
+        <div id="finalSurprise" class="hidden">
+            <p>I LOVE YOU HAPPY ANNIVERSARY MY MEGGY</p>
+            <pre id="asciiArt"></pre> <!-- Container for the ASCII art -->
+            <span id="cursor">|</span> <!-- Simulated cursor -->
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
