@@ -38,8 +38,8 @@ h1 {
 }
 
 .game-box {
-    width: 100px;
-    height: 100px;
+    width: 300px; 
+    height: 300px; 
     background-color: #ddd;
     display: flex;
     justify-content: center;
@@ -48,40 +48,42 @@ h1 {
     font-size: 24px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    background-size: cover;
+    background-position: center;
 }
 
 .game-box.flipped#box1 {
-    background-image: url('image1.jpg');
+    background-image: url('IMG_1892.png');
     background-size: cover;
     color: transparent;
 }
 
 .game-box.flipped#box2 {
-    background-image: url('image2.jpg');
+    background-image: url('IMG_2987.png');
     background-size: cover;
     color: transparent;
 }
 
 .game-box.flipped#box3 {
-    background-image: url('image3.jpg');
+    background-image: url('IMG_4990.png');
     background-size: cover;
     color: transparent;
 }
 
 .game-box.flipped#box4 {
-    background-image: url('image4.jpg');
+    background-image: url('IMG_5232.png');
     background-size: cover;
     color: transparent;
 }
 
 .game-box.flipped#box5 {
-    background-image: url('image5.jpg');
+    background-image: url('IMG_5257.png');
     background-size: cover;
     color: transparent;
 }
 
 .game-box.flipped#box6 {
-    background-image: url('image6.jpg');
+    background-image: url('IMG_7288.png');
     background-size: cover;
     color: transparent;
 }
