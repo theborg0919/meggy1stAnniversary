@@ -70,7 +70,7 @@ const quizQuestions = [
     {
         question: "My favorite color?",
         options: ["red", "orange", "black", "i don't have a favorite color because i can't choose"],
-        correctAnswer: 1 // Index of the correct answer
+        correctAnswer: 1 
     },
     {
         question: "What was \"the pool incident\"?",
@@ -79,7 +79,7 @@ const quizQuestions = [
     },
     {
         question: "What did we paint at Color Me Mine?",
-        options: ["A car and a bowl", "A bowl and a cup", "A cup and a plate", "Batman"],
+        options: ["A car and a bowl", "A box and a cup", "A cup and a plate", "Batman"],
         correctAnswer: 1
     },
     {
