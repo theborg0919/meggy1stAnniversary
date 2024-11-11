@@ -37,7 +37,9 @@ function flipBox(boxNumber) {
         resetBoxes();
     } else if (clickedOrder.length === correctOrder.length) {
         document.getElementById('boxFeedback').innerHTML = "YAYAY CLICK BELOW NOW";
-        document.getElementById('nextButton').classList.remove('hidden');
+        const nextButton = document.getElementById('nextButton');
+        nextButton.style.display = 'block';
+        nextButton.onclick = startQuiz;
     }
 }
 
