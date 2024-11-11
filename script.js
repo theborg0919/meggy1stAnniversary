@@ -108,19 +108,25 @@ function checkAnswer(selectedOption) {
     const currentQuestion = quizQuestions[currentQuestionIndex];
     const quizFeedback = document.getElementById('quizFeedback');
 
-    if (currentQuestion.correctAnswer.includes(selectedOption)) {
+    console.log(`Selected Option: ${selectedOption}, Correct Answer: ${currentQuestion.correctAnswer}`);
+
+    const isCorrect = Array.isArray(currentQuestion.correctAnswer)
+        ? currentQuestion.correctAnswer.includes(selectedOption)
+        : currentQuestion.correctAnswer === selectedOption;
+
+    if (isCorrect) {
         quizFeedback.innerHTML = "YIPPEE!";
         quizFeedback.style.color = "green";
-        
+
         setTimeout(() => {
-            quizFeedback.innerHTML = ""; 
+            quizFeedback.innerHTML = "";
             currentQuestionIndex++;
-            
+
             if (currentQuestionIndex < quizQuestions.length) {
-                loadQuestion(); 
+                loadQuestion();
             } else {
                 document.getElementById('quizGame').style.display = 'none';
-                startFinalSurprise(); 
+                startFinalSurprise();
             }
         }, 1000);
     } else {
@@ -128,6 +134,7 @@ function checkAnswer(selectedOption) {
         quizFeedback.style.color = "red";
     }
 }
+
 
 function startQuiz() {
     document.getElementById('boxGame').style.display = 'none';
