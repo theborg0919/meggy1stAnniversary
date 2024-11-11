@@ -32,15 +32,13 @@ function flipBox(boxNumber) {
     clickedOrder.push(boxNumber);
     const box = document.getElementById(`box${boxNumber}`);
     box.classList.add('flipped');
-    
+
+    // Check if the clicked order is correct
     if (!checkOrder()) {
         resetBoxes();
     } else if (clickedOrder.length === correctOrder.length) {
-        document.getElementById('boxFeedback').innerHTML = "now...";
-        setTimeout(() => {
-            document.getElementById('boxGame').style.display = 'none';
-            startQuiz(); 
-        }, 1000);
+        document.getElementById('boxFeedback').innerHTML = "🎉 You did it! Click 'Next Step' to continue.";
+        document.getElementById('nextButton').classList.remove('hidden'); // Show the "Next" button
     }
 }
 
@@ -55,7 +53,7 @@ function checkOrder() {
 
 function resetBoxes() {
     clickedOrder = [];
-    document.getElementById('boxFeedback').innerHTML = "WRONG.";
+    document.getElementById('boxFeedback').innerHTML = "❌ Wrong order! Try again.";
     setTimeout(() => {
         document.getElementById('boxFeedback').innerHTML = "";
         for (let i = 1; i <= 6; i++) {
@@ -108,8 +106,8 @@ function loadQuestion() {
 function checkAnswer(selectedOption) {
     const currentQuestion = quizQuestions[currentQuestionIndex];
     const quizFeedback = document.getElementById('quizFeedback');
-    
-    if (selectedOption === currentQuestion.correctAnswer) {
+
+    if (currentQuestion.correctAnswer.includes(selectedOption)) {
         quizFeedback.innerHTML = "YIPPEE!";
         quizFeedback.style.color = "green";
         
