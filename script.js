@@ -33,12 +33,11 @@ function flipBox(boxNumber) {
     const box = document.getElementById(`box${boxNumber}`);
     box.classList.add('flipped');
 
-    // Check if the clicked order is correct
     if (!checkOrder()) {
         resetBoxes();
     } else if (clickedOrder.length === correctOrder.length) {
-        document.getElementById('boxFeedback').innerHTML = "🎉 You did it! Click 'Next Step' to continue.";
-        document.getElementById('nextButton').classList.remove('hidden'); // Show the "Next" button
+        document.getElementById('boxFeedback').innerHTML = "YAYAY CLICK BELOW NOW";
+        document.getElementById('nextButton').classList.remove('hidden');
     }
 }
 
@@ -53,7 +52,7 @@ function checkOrder() {
 
 function resetBoxes() {
     clickedOrder = [];
-    document.getElementById('boxFeedback').innerHTML = "❌ Wrong order! Try again.";
+    document.getElementById('boxFeedback').innerHTML = "nopers click it in order";
     setTimeout(() => {
         document.getElementById('boxFeedback').innerHTML = "";
         for (let i = 1; i <= 6; i++) {
@@ -129,9 +128,13 @@ function checkAnswer(selectedOption) {
 }
 
 function startQuiz() {
+    document.getElementById('boxGame').style.display = 'none';
+
     document.getElementById('quizGame').style.display = 'block';
+
     loadQuestion();
 }
+
 
 const asciiArtString = `
 ________00000000000___________000000000000_________
